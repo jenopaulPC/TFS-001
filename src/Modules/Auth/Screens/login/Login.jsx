@@ -13,9 +13,7 @@ const Login = () => {
   const [isBooleanPassword, setIsBooleanPassword] = useState(false);
 
   //Useeffect
-  useEffect(()=>{
-
-  },[])
+  useEffect(() => {}, []);
 
   //function
 
@@ -61,12 +59,7 @@ const Login = () => {
     } else {
       return false;
     }
-    // const hasUpperCase = /[A-Z]/.test(password);
-    // const hasLowerCase = /[a-z]/.test(password);
-    // const hasNumbers = /[0-9]/.test(password);
-    // const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-
-    // return password.length >= minLength && hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars;
+    return false;
   }
 
   //   ///updating value
@@ -139,8 +132,10 @@ const Login = () => {
         </div>
         <div className="my-4 text-center">
           <p className="">
-            If you don't have accout, 
-            <Link to='' className="text-blod fw-bold text-danger">Sign up</Link>
+            If you don't have accout,
+            <span to='Resiger' className="text-blod fw-bold text-danger">
+              Sign up
+            </span>
           </p>
         </div>
       </form>
