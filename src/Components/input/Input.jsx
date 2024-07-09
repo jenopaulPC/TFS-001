@@ -3,13 +3,15 @@ import { InputGroup, InputGroupText, Input as RsInput } from "reactstrap";
 import "./Input.css";
 
 const Input = ({
+  id = "",
+  placeholder = "",
   beforeText = "",
   afterText = "",
   type = "text",
-  onChange = () => {},
+  onChange,
   disabled = false,
   size = "md",
-  value="",
+  value = "",
 }) => {
   const [isEyeClicked, setIsEyeClicked] = useState(false);
   const exceptThisSymbols = ["e", "E", "+", "-", "."];
@@ -19,6 +21,8 @@ const Input = ({
       <InputGroup>
         {beforeText && <InputGroupText>{beforeText}</InputGroupText>}
         <RsInput
+          placeholder={placeholder}
+          id={id}
           className="input"
           type={isEyeClicked ? "text" : type}
           value={value}

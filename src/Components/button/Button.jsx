@@ -21,6 +21,7 @@ const Button = ({
         disabled={disabled}
         outline={outline}
         block={block}
+        style={{boxShadow: "none"}}
       >
         {text}
       </RsButton>
